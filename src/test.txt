@@ -1,0 +1,36 @@
+@here Accounts Management System
+The account management feature involves creating, updating, and retrieving account details. Each company should have separate accounts managed by the company’s owner. The website owner should be able to view accounts of all companies.
+Test Case Scenarios:
+Ensure that company owners can create accounts for their company.
+Ensure that accounts are isolated to each company (i.e., an account from one company should not be accessible by another company’s owner).
+Ensure that the website owner can view all accounts across all companies.
+1. Manage Income
+Only admins should have the ability to add income records.
+Test Case Scenarios:
+Verify that an admin user can add income to the system.
+Ensure that non-admin users cannot add income (they should receive an unauthorized error or permission denied message).
+Verify that income entries are correctly linked to the appropriate company.
+2. Manage Expense
+Any user can submit an expense, but it needs admin approval before being added to the system.
+Test Case Scenarios:
+Ensure that regular users can submit expense requests.
+Verify that submitted expenses are not reflected in the company’s account until an admin approves them.
+Ensure that only admins can approve or reject submitted expenses.
+Verify that once an expense is approved, it is reflected in the correct company’s account.
+3. Reports
+Reports should only be visible to users who have been granted permission.
+Test Case Scenarios:
+Verify that users with permission can access and view the reports.
+Ensure that unauthorized users cannot view the reports (they should receive an error or “access denied” message).
+Ensure that reports contain correct data based on the user’s access level (company owner sees their company’s data, website owner sees all data, etc.).
+4. Company Ownership and Structure
+Each company has an owner, and accounts should be scoped to individual companies. The website owner should have super-admin privileges, allowing them to see all companies and their respective accounts.
+Test Case Scenarios:
+Ensure that when a company is created, an owner is assigned to it.
+Verify that the company owner has full access to their own company’s accounts and operations.
+Ensure that the website owner can see all companies, their owners, and respective accounts.
+Ensure that no other users (even if they belong to a company) can access or interfere with other companies’ accounts.
+Additional Considerations:
+Authentication & Authorization: Test cases should cover role-based access control, ensuring that only authorized users (admins, company owners, regular users) can access specific features.
+Concurrency & Edge Cases: Test how the system behaves when multiple users perform operations simultaneously (e.g., multiple expense submissions at once, different users viewing reports).
+These test cases ensure that the system is secure, with proper permissions, and functions as expected for each role involved.
